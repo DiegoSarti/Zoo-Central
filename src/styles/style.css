@@ -1,29 +1,40 @@
 header {
   width: 100%;
-  height: 70px; /* Alterado de 100px para 70px para um header mais fino */
   background-color: #416041;
-  /* A propriedade justify-content não é necessária aqui pois o header não é um container flex */
+  padding: 10px 0; /* Adiciona um padding vertical para dar espaço */
 }
 
 .header_Nav {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 100%; /* Garante que o container preencha toda a altura do header */
   align-items: center;
+  max-width: 1200px; /* Largura máxima para alinhar com o conteúdo */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Padding horizontal para telas menores */
   color: #E5DFB9;
-  padding: 0 30px; /* Adicionado para criar um espaço nas laterais esquerda e direita */
+}
+
+.header_Nav .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header_Nav img {
+    height: 50px;
+    width: 100px;
+    display: block;
 }
 
 .naves {
-  display: flex;
-  gap: 30px;
+  /* Não precisa de display: flex aqui, pois o ul já é flex */
+  z-index: 10; /* Garante que os links fiquem acima da logo centralizada */
 }
 
 .naves ul {
   display: flex;
   gap: 30px;
-  list-style: none; /* Remove os marcadores da lista */
+  list-style: none;
   padding: 0;
   margin: 0;
 }

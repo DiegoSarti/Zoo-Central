@@ -11,7 +11,8 @@
     <header id="header">
         <nav>
             <div class="header_Nav">
-                <div><img src="/src/assets/images/tigre.png (4).png" alt=""></div>
+                <div><img src="src/assets/images/LOGO (4).png" alt="Logo Zoo Central"></div>
+
                 
                 <div class="naves">
                     
@@ -19,8 +20,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#lojas">Loja</a></li>
                     <li><a href="#ingressos">ingressos</a></li>
-                    <li><a href="#">minha Conta</a></li>
-                    <li><a href="#">Carrinho</a></li>
+                    <li><a href="/src/components/Carrinho.html">Carrinho</a></li>
                 </ul>
             </div>
             </div>
@@ -71,7 +71,7 @@
                 <li>Mapa do zoológico</li>
             </ul>
 
-            <button class="btn-comprar">Comprar agora</button>
+            <button onclick="adicionarAoCarrinho('individual')" class="btn-comprar">Comprar agora</button>
         </div>
 
         <div class="card">
@@ -92,7 +92,7 @@
                 <li>Descontos na loja</li>
             </ul>
 
-            <button class="btn-comprar">Comprar agora</button>
+            <button onclick="adicionarAoCarrinho('infantil')" class="btn-comprar">Comprar agora</button>
         </div>
 
         <div class="card card-destaque">
@@ -114,7 +114,7 @@
                 <li>Descontos na loja</li>
             </ul>
 
-            <button class="btn-comprar">Comprar agora</button>
+            <button onclick="adicionarAoCarrinho('infantil')" class="btn-comprar">Comprar agora</button>
         </div>
 
     </div>
@@ -251,5 +251,6 @@
         <p>&copy; 2025 ZooCentral. Todos os direitos reservados.</p>
     </div>
 </footer>
+    <script src="src/scripts/carrinho.js"></script>
 </body>
 </html>
