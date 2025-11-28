@@ -1,0 +1,103 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 40%;
+
+    background-color: #EBE8CF;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    box-shadow: black 3px 3px 10px;
+}
+
+.logo {
+    height: 100px;
+    margin-bottom: 30px;
+
+    /* border: solid black 1px; */
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    /* border: solid black 1px; */
+}
+
+.title {
+    font-size: 20px;
+    color: #555;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #666;
+
+}
+
+.sla{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 30px;
+    /* border: solid rgb(245, 0, 0) 1px; */
+}
+
+.login-form input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+
+    border-bottom: 1px solid #aaa;
+    /* border: solid black 1px; */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+
+    /* border: solid rgb(21, 255, 0) 1px; */
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #aaa;
+    color: white;
+}
+
+.links {
+    font-size: 12px;
+    text-align: right;
+
+    color: #555;
+}
+
+.links a {
+    color: #555;
+    text-decoration: none;
+}
+
+.links span {
+    display: block;
+}

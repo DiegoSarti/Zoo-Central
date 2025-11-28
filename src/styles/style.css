@@ -1,0 +1,589 @@
+header {
+  width: 100%;
+  height: 70px; /* Alterado de 100px para 70px para um header mais fino */
+  background-color: #416041;
+  /* A propriedade justify-content não é necessária aqui pois o header não é um container flex */
+}
+
+.header_Nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%; /* Garante que o container preencha toda a altura do header */
+  align-items: center;
+  color: #E5DFB9;
+  padding: 0 30px; /* Adicionado para criar um espaço nas laterais esquerda e direita */
+}
+
+.naves {
+  display: flex;
+  gap: 30px;
+}
+
+.naves ul {
+  display: flex;
+  gap: 30px;
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.naves a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: inherit; /* Herda a cor do container pai */
+}
+
+.hero-section {
+    width: 100%;
+    height: 80vh; /* Ocupa 80% da altura da tela */
+    
+    /* Configuração da Imagem de Fundo */
+    background-image: url('/src/assets/images/tigre.png'); /* CONFIRA O CAMINHO AQUI */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Flexbox para alinhar o conteúdo verticalmente */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    position: relative; /* Necessário para o overlay funcionar */
+}
+
+/* Camada branca transparente (Efeito de neblina da foto) */
+/* Isso ajuda o texto escuro a aparecer em cima da foto */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* Branco com 40% de transparência */
+    z-index: 1;
+}
+
+/* O conteúdo (texto e botões) */
+.hero-content {
+    position: relative; /* Para ficar acima da camada branca */
+    z-index: 2;
+    max-width: 600px; /* Limita a largura do texto para não esticar na tela toda */
+    padding-left: 8%; /* Espaçamento da esquerda */
+    font-family: Arial, sans-serif; /* Ou a fonte que você estiver usando */
+}
+
+/* Título */
+.hero-content h1 {
+    font-size: 3rem; /* Tamanho grande */
+    color: #1F3320; /* Verde bem escuro, quase preto */
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+/* Parágrafo */
+.hero-content p {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Container dos botões */
+.botoes-wrapper {
+    display: flex;
+    gap: 20px; /* Espaço entre os botões */
+}
+
+/* Estilo geral dos botões */
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Borda bem redonda (Pill shape) */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Efeito de clique leve */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Botão Verde */
+.btn-verde {
+    background-color: #4C8C2B; /* Cor verde da imagem */
+    color: white;
+}
+
+/* Botão Cinza */
+.btn-cinza {
+    background-color: #D9D9D9; /* Cinza claro */
+    color: #333;
+}
+.ingressos-section {
+    background-color: #EBE8CF; /* Cor de fundo bege da imagem */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.ingressos-header h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.ingressos-header p {
+    color: #444;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+/* Container dos Cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Para funcionar no celular */
+}
+
+/* Estilo Individual do Card */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Necessário para posicionar o badge */
+}
+
+/* Círculo do Ícone */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #E8F0E6; /* Fundo verde bem clarinho */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Títulos e Descrições */
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.desc-topo {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* Preço */
+.preco {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.por-pessoa {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #999;
+}
+
+/* Lista de Benefícios */
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.lista-beneficios li {
+    padding: 8px 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Botão */
+.btn-comprar {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #c0c0c0;
+}
+
+/* --- Estilos Especiais para o Card DESTAQUE --- */
+
+.card-destaque {
+    border: 2px solid #4C6C4C; /* Borda verde escura */
+}
+
+.badge-popular {
+    position: absolute;
+    top: -15px; /* Sobe o elemento para fora do card */
+    background-color: #4C6C4C;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+/* --- Seção da Loja --- */
+
+/* Fundo bege geral da seção */
+.loja-section {
+    background-color: #EBE8CF; /* Mesma cor de fundo da seção de ingressos */
+    padding: 60px 20px 100px 20px; /* Padding extra embaixo */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho centralizado */
+.loja-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.loja-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.loja-header p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* --- O Container Branco Arredondado --- */
+.loja-container-branco {
+    background-color: white;
+    width: 100%;
+    max-width: 1100px; /* Largura máxima para não ficar muito esticado em telas grandes */
+    border-radius: 40px; /* Bordas bem arredondadas */
+    display: flex; /* Coloca imagem e texto lado a lado */
+    overflow: hidden; /* IMPORTANTE: Garante que a imagem corte nas bordas redondas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+}
+
+/* Wrapper da Imagem (Esquerda) */
+.loja-img-wrapper {
+    flex: 1; /* Ocupa 50% do espaço */
+    min-height: 450px; /* Garante uma altura mínima para a caixa */
+}
+
+.loja-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher todo o espaço sem distorcer */
+    display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+/* Wrapper do Conteúdo (Direita) */
+.loja-content {
+    flex: 1; /* Ocupa os outros 50% do espaço */
+    padding: 60px; /* Espaçamento interno generoso */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente */
+    align-items: flex-start; /* Alinha tudo à esquerda */
+}
+
+.loja-content h3 {
+    font-size: 2.8rem;
+    color: #335233; /* Verde escuro do título */
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.loja-content p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 450px; /* Limita a largura do parágrafo para leitura melhor */
+}
+
+/* Responsividade para Tablets e Celulares */
+@media (max-width: 900px) {
+    .loja-container-branco {
+        flex-direction: column; /* Empilha imagem em cima do texto */
+        height: auto;
+    }
+
+    .loja-img-wrapper {
+        min-height: 300px; /* Altura menor para a imagem no mobile */
+    }
+    
+    .loja-content {
+        padding: 40px 30px; /* Menos padding no mobile */
+        align-items: center; /* Centraliza tudo no mobile */
+        text-align: center;
+    }
+
+    .loja-content h3 {
+        font-size: 2rem;
+    }
+}
+footer {
+    background-color: white;
+    padding-top: 60px;
+    font-family: 'Arial', sans-serif;
+    color: #666; /* Cor cinza padrão do texto */
+}
+
+/* Container que segura as 4 colunas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espalha as colunas */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 40px;
+}
+
+/* Configuração de cada coluna */
+.footer-col {
+    flex: 1; /* Faz as colunas terem tamanhos iguais */
+    min-width: 200px; /* Impede que fiquem muito pequenas */
+}
+
+/* Títulos das colunas (Verde escuro) */
+.footer-col h3 {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo especial para o nome da marca na primeira coluna */
+.footer-brand {
+    color: #386638 !important; /* Verde da marca */
+    font-size: 1.5rem !important;
+    margin-top: 0;
+}
+
+.footer-desc {
+    line-height: 1.5;
+    font-size: 0.95rem;
+    max-width: 250px;
+}
+
+/* Listas (Links e Contato) */
+.footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 12px;
+}
+
+/* Links Rápidos */
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: #386638; /* Verde ao passar o mouse */
+}
+
+/* Itens de Contato (alinhar ícone com texto) */
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+/* Redes Sociais */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a svg {
+    transition: stroke 0.2s;
+}
+
+.social-icons a:hover svg {
+    stroke: #386638; /* Verde ao passar o mouse */
+}
+
+/* --- Barra Inferior (Copyright) --- */
+.footer-bottom {
+    border-top: 1px solid #eee; /* Linha divisória fina */
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas */
+        gap: 30px;
+    }
+}
+.auth-container {
+            max-width: 450px;
+            margin: 80px auto;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background-color: var(--white);
+            box-shadow: var(--shadow-light);
+        }
+        .auth-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .auth-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+        .auth-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        .auth-form .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .auth-form .links a {
+            color: var(--green-700);
+        }
+
+/* Configuração da Seção */
+.nossos-animais {
+  background-color: #EBE8CF; /* Cor de fundo creme suave igual da imagem */
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif; /* Pode trocar pela sua fonte */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Títulos e Subtítulos */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Grid (Layout dos Cards) */
+.animais-grid {
+  display: grid;
+  /* Cria 4 colunas iguais, ou se ajusta em telas menores */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Estilo do Card */
+.animal-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação do Hover */
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+/* O EFEITO DE HOVER (IGUAL DO ELEFANTE) */
+.animal-card:hover {
+  transform: scale(1.05); /* Aumenta o card em 5% */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra fica mais forte */
+}
+
+/* Estilo da Imagem */
+.card-image {
+  width: 100%;
+  height: 250px; /* Altura fixa para alinhar todos */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem esticar */
+}
+
+/* Estilo do Texto do Card */
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #777;
+  font-weight: 400;
+}

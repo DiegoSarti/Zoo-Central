@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoo Central</title>
+  <link rel="stylesheet" href="/src/styles/styleLogin.css">
+  <link rel="stylesheet" href="global.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <img src="/src/assets/images/LOGO (4).png" alt="Logo Jardim Real" class="logo" />
+
+      <form class="login-form">
+
+        <h1 class="title">Login</h1>
+
+        <div class="sla">
+
+          <div class="entradas">
+            <div>
+              <label for="txtUsuario"></label>
+              <input id="txtUsuario" type="email" placeholder="Email" required />
+            </div>
+
+            <div>
+              <label for="txtSenha"></label>
+              <input id="txtSenha" type="password" placeholder="Senha" required minlength="3" />
+            </div>
+          </div>
+
+
+
+          <div class="actions">
+            <button onclick="login()" type="button" value="Entrar" class="btn">Entrar</button>
+
+            <div class="links">
+              <a href="/src/components/login/indexRecuperar.html">Esqueceu a senha ?</a>
+              <span>ou</span>
+              <a href="/src/components/login/indexCriarConta.html">Criar conta</a>
+            </div>
+
+          </div>
+        </div>
+      </form>
+
+      <p id="mensagem"></p>
+    </div>
+  </main>
+  <script src="/src/scripts/login.js"></script>
+</body>
+
+</html>
